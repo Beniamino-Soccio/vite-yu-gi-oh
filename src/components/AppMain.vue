@@ -1,6 +1,7 @@
 <script>
 import MainCardList from './MainCardList.vue';
 import MainLoader from './MainLoader.vue';
+import MainInput from './MainInput.vue';
 import axios from "axios";
 
 export default{
@@ -12,7 +13,7 @@ export default{
         }
     },
     methods: {
-        getCardsList(numOfCards){
+        getCardsList(){
             axios.get(this.apiUrl, {
                 params: {
                     num : 40,
@@ -41,11 +42,13 @@ export default{
     components:{
         MainCardList,
         MainLoader,
+        MainInput,
     }
 }
 </script>
 
 <template>
+    <MainInput/>
     <MainLoader v-if="loading"/>
     <MainCardList v-else :cards="cardsList" />
 </template>

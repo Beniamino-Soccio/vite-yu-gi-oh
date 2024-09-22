@@ -15,7 +15,8 @@ export default{
 }
 </script>
 
-<template><AppHeader/>
+<template>
+    <AppHeader/>
     <div class="main-content">
         <div class="container">
             <AppMain/>
