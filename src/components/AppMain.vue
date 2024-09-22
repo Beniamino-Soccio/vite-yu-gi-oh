@@ -13,11 +13,12 @@ export default{
         }
     },
     methods: {
-        getCardsList(){
+        getCardsList(archetypeFilter = null){
             axios.get(this.apiUrl, {
                 params: {
-                    num : 40,
+                    num : 500,
                     offset: 0,
+                    archetype: archetypeFilter,
                 }
             })
                 .then((response) => {
@@ -34,6 +35,10 @@ export default{
                     this.loading = false;
                     // always executed
                 });
+        },
+        changeCardList(information){
+            console.log(`è arrivato ad AppMain ${information}`);
+            this.getCardsList(information);
         }
     },
     created(){
@@ -48,7 +53,7 @@ export default{
 </script>
 
 <template>
-    <MainInput/>
+    <MainInput @archetype-search="changeCardList"/>
     <MainLoader v-if="loading"/>
     <MainCardList v-else :cards="cardsList" />
 </template>
