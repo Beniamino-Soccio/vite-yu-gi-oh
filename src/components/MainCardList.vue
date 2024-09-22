@@ -22,7 +22,8 @@ export default{
 
 <template>
     <div class="row">
-        <div class="col d-flex justify-content-evenly flex-wrap bg-white mt-5 py-5">
+        <p class="text-white text-center fs-1">found {{  cards.length }} cards</p>
+        <div class="col d-flex justify-content-evenly flex-wrap bg-white py-5">
             <MainCardListItem v-for="card in cards" 
                 :key="card.id"
                 :playcard="card"
@@ -33,4 +34,5 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+
 </style>
