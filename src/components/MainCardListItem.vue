@@ -9,7 +9,7 @@ export default{
 </script>
 
 <template>
-    <h1>ciao sono l'header</h1>
+    <h5>io sono la card</h5>
 </template>
 
 <style lang="scss" scoped>

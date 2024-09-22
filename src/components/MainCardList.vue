@@ -1,5 +1,6 @@
 <script>
-import MainCardList from './MainCardList.vue';
+import MainCardListItem from './MainCardListItem.vue';
+
 export default{
     data(){
         return{
@@ -7,15 +8,15 @@ export default{
         }
     },
     components:{
-    MainCardList
+      MainCardListItem
 
     }
 }
 </script>
 
 <template>
-    <h2>io sono il main</h2>
-<MainCardList/>
+    <h3>io sono la card list</h3>
+    <MainCardListItem/>
 </template>
 
 <style lang="scss" scoped>
