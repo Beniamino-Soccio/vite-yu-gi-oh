@@ -15,16 +15,18 @@ export default{
 </script>
 
 <template>
-    <p>{{ playcard.name }}</p>
-    <p>{{ playcard.archetype }}</p>
-    <div class="card" style="width: 18rem;">
+    <div class="card mb-3" style="width: 18rem;">
         <img :src="playcard.card_images[0].image_url" alt="">
         <div class="card-body">
-            <h5>{{ playcard.name }}</h5>
-            <p>{{ playcard.archetype }}</p>  
+            <h5 class="text-white text-center">{{ playcard.name }}</h5>
+            <p class="text-center">{{ playcard.archetype }}</p>  
         </div>
     </div>
 </template>
 
 <style scoped>
+.card-body{
+    background-color: goldenrod;
+}
+
 </style>

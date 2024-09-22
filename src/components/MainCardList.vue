@@ -21,11 +21,15 @@ export default{
 </script>
 
 <template>
-    <h3>io sono la card list e {{  cards.length }} elementi</h3>
-    <MainCardListItem v-for="card in cards" 
-        :key="card.id"
-        :playcard="card"
-    />
+    <div class="row">
+        <div class="col d-flex justify-content-evenly flex-wrap bg-white mt-5 py-5">
+            <MainCardListItem v-for="card in cards" 
+                :key="card.id"
+                :playcard="card"
+            />
+        </div>
+    </div>
+    
 </template>
 
 <style lang="scss" scoped>

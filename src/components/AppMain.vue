@@ -37,7 +37,6 @@ export default{
 </script>
 
 <template>
-    <h2>io sono il main</h2>
     <MainCardList :cards="cardsList" />
 </template>
 
