@@ -6,13 +6,18 @@ export default{
     data(){
         return{
               cardsList : [],
-              apiUrl : "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0",
+              apiUrl : "https://db.ygoprodeck.com/api/v7/cardinfo.php",
 
         }
     },
     methods: {
-        getCardsList(){
-            axios.get(this.apiUrl)
+        getCardsList(numOfCards){
+            axios.get(this.apiUrl, {
+                params: {
+                    num : numOfCards,
+                    offset: 0,
+                }
+            })
                 .then((response) => {
                     // handle success
                     console.log(response.data.data);
@@ -28,7 +33,7 @@ export default{
         }
     },
     created(){
-        this.getCardsList();
+        this.getCardsList(40);
     },
     components:{
         MainCardList,
